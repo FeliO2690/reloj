@@ -43,7 +43,7 @@ public class Reloj extends JFrame {
                         Thread.sleep(1000);
 
                     } catch (InterruptedException e) {
-                        System.out.println("Hilo interrumpido");
+                        System.out.println("Interrumpir hilo");
                     }
                 }
             }
@@ -62,13 +62,17 @@ public class Reloj extends JFrame {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new Reloj().setVisible(true);
-            }
-        });
+
+        new Reloj().setVisible(true);
 
     }
 
 }
+
+//    Calendar horaEspecifica = Calendar.getInstance();
+//    horaEspecifica.set(Calendar.HOUR_OF_DAY, 12); 
+//    horaEspecifica.set(Calendar.MINUTE, 30);  
+//    SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
+//    String clock = format.format(horaEspecifica.getTime());
+//
+//    labelHora.setText(clock);
